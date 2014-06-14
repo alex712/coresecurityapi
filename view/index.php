@@ -15,9 +15,12 @@ if (!is_user_logged_in()) {
 		case 'signup':
 			$wp_crm_state->set ('state', WP_CRM_State::SignUp);
 			break;
-		case 'forgot':
-			$wp_crm_state->set ('state', WP_CRM_State::Forgot);
-			break;
+        case 'forgot':
+            $wp_crm_state->set ('state', WP_CRM_State::Forgot);
+            break;
+        case 'reset':
+            $wp_crm_state->set ('state', WP_CRM_State::Reset);
+            break;
 		default:
 			$wp_crm_state->set ('state', WP_CRM_State::Login);
 		}
